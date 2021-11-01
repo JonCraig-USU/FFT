@@ -42,10 +42,11 @@ def runTime(n):
     p = [i for i in range(n)]
     w = []
     n = len(p)
+    fft(p, w, n)
 
-sizes = [128 * 2**i for i in range(1, 5)]
+sizes = [2**i for i in range(7, 26)]
 
-showTime(runTime, sizes=sizes)
+showTime(runTime, sizes, fit='polynomial')
 
 
 # print("FFT: " + str(fft(p, w, n)))
